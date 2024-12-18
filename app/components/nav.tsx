@@ -19,16 +19,16 @@ export function Navbar() {
       <Title
         className="self-center mr-10" />
       <Navlink
-        key="contact"
-        href="/p/contact"
-        className="self-center"
-        title="Kontakt"
-      />
-      <Navlink
         key="work"
         href="/p/work"
         className="self-center"
         title="Arbeit"
+      />
+      <Navlink
+        key="contact"
+        href="/p/contact"
+        className="self-center"
+        title="Kontakt"
       />
     </nav >
   )

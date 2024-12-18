@@ -26,18 +26,18 @@ export default function Page() {
       {/* Links */}
       <div className="flex justify-between">
         <FrontNavLink
-          keyRef="contact"
-          href="/p/contact"
-          className=""
-          title="Kontakt"
-          imgSrc="/img/img_06.png"
-        />
-        <FrontNavLink
           keyRef="work"
           href="/p/work"
           className=""
           title="Arbeit"
           imgSrc="/img/img_12.png"
+        />
+        <FrontNavLink
+          keyRef="contact"
+          href="/p/contact"
+          className=""
+          title="Kontakt"
+          imgSrc="/img/img_06.png"
         />
         <FrontNavLink
           keyRef="impress"
