@@ -1,21 +1,43 @@
-import { BlogPosts } from 'app/components/posts'
+import Link from "next/link";
 
 export default function Page() {
   return (
-    <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
-      </h1>
-      <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
-      </p>
-      <div className="my-8">
-        <BlogPosts />
-      </div>
-    </section>
+    <main className="h-screen bg-[url('/mesh-gradient.png')] flex flex-col px-60 py-32 justify-between">
+      {/* Header */}
+      <div className="flex flex-col w-auto h-auto" >
+        <h1 className="text-6xl font-bold text-white mb-6">
+          Charly Krenn
+        </h1>
+        <p className="text-2xl font-semibold text-white">
+          Sozialarbeiter*in
+          <br />
+          Autor*in
+        </p>
+      </div >
+      {/* Links */}
+      <div className="flex justify-between">
+        <Link
+          key="contact"
+          href="/p/contact"
+          className=""
+        >
+          <p className="text-2xl text-white font-bold">Kontakt</p>
+        </Link>
+        <Link
+          key="work"
+          href="/p/work"
+          className=""
+        >
+          <p className="text-2xl text-white font-bold">Arbeit</p>
+        </Link>
+        <Link
+          key="impress"
+          href="/p/impress"
+          className=""
+        >
+          <p className="text-2xl text-white font-bold">Impressum</p>
+        </Link>
+      </div >
+    </main>
   )
 }
