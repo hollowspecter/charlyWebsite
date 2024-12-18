@@ -152,3 +152,28 @@ table {
 .title {
   text-wrap: balance;
 }
+
+/* FIN ADDS */
+article p {
+  @apply my-4 text-neutral-800 dark:text-neutral-200;
+}
+
+article h1 {
+  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+}
+
+article h2 {
+  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+}
+
+article h3 {
+  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+}
+
+article h4 {
+  @apply text-lg font-medium tracking-tight mt-6 mb-2;
+}
+
+article strong {
+  @apply font-medium;
+}

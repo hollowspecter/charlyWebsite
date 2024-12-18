@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Title } from './title'
 import { Navlink } from './navlink'
 

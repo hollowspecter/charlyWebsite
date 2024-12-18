@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <main className="flex flex-col items-center">
             <Navbar />
-            <article className="w-[800px] mt-8">
+            <article className="w-[800px] grow">
                 {children}
             </article>
             <Footer />
