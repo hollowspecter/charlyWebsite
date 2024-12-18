@@ -1,14 +1,14 @@
 import Link from "next/link";
+import { Navlink } from "./components/navlink";
+import { Title } from "./components/title";
 
 export default function Page() {
   return (
-    <main className="h-screen bg-[url('/mesh-gradient.png')] flex flex-col px-60 py-32 justify-between">
+    <main className="h-screen bg-[url('/mesh-gradient.png')] flex flex-col px-60 py-32 justify-between bg-cover">
       {/* Header */}
       <div className="flex flex-col w-auto h-auto" >
-        <h1 className="text-6xl font-bold text-white mb-6">
-          Charly Krenn
-        </h1>
-        <p className="text-2xl font-semibold text-white">
+        <Title />
+        <p className="text-3xl text-white">
           Sozialarbeiter*in
           <br />
           Autor*in
@@ -16,28 +16,25 @@ export default function Page() {
       </div >
       {/* Links */}
       <div className="flex justify-between">
-        <Link
+        <Navlink
           key="contact"
           href="/p/contact"
           className=""
-        >
-          <p className="text-2xl text-white font-bold">Kontakt</p>
-        </Link>
-        <Link
+          title="Kontakt"
+        />
+        <Navlink
           key="work"
           href="/p/work"
           className=""
-        >
-          <p className="text-2xl text-white font-bold">Arbeit</p>
-        </Link>
-        <Link
+          title="Arbeit"
+        />
+        <Navlink
           key="impress"
           href="/p/impress"
           className=""
-        >
-          <p className="text-2xl text-white font-bold">Impressum</p>
-        </Link>
+          title="Impressum"
+        />
       </div >
-    </main>
+    </main >
   )
 }
