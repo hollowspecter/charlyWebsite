@@ -1,11 +1,10 @@
 import './global.css'
 import type { Metadata } from 'next'
-import { baseUrl } from './sitemap'
 import { inter } from 'app/ui/fonts';
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  // metadataBase: new URL(baseUrl), //TODO check what these urls need to be
   title: {
     default: 'Charly Krenn',
     template: '%s | Charly Krenn',
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Charly Krenn',
     description: '[WIP]',
-    url: baseUrl,
+    // url: baseUrl,
     siteName: 'Charly Krenn',
     locale: 'de_DE',
     type: 'website',

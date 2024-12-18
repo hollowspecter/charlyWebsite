@@ -15,9 +15,9 @@ const navItems = {
 
 export function Navbar() {
   return (
-    <nav className="flex justify-evenly h-64 bg-[url('/mesh-gradient.png')] bg-center py-16 w-full">
+    <nav className="flex justify-evenly h-64 bg-[url('/mesh-gradient.png')] bg-cover py-16 w-full">
       <Title
-        className="self-center" />
+        className="self-center mr-10" />
       <Navlink
         key="contact"
         href="/p/contact"
