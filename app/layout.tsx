@@ -42,7 +42,7 @@ export default function RootLayout({
     <html
       lang="de"
       className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
+        'text-black bg-white text-neutral-800',
         inter.className
       )}
     >

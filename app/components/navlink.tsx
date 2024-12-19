@@ -17,24 +17,32 @@ export function Navlink({ key, href, className, title }) {
             >
                 <Image
                     src="/img/img_18.png"
-                    width={120}
-                    height={120}
+                    width={80}
+                    height={80}
                     alt="playful background doodles"
-                    className="absolute transition-opacity w-full h-full bottom-10 opacity-0 group-hover:opacity-100"
+                    className="absolute transition-opacity bottom-0 opacity-0 group-hover:opacity-100 md:hidden"
                 />
-                <p className="text-3xl text-white font-bold transition-all">{title}</p>
                 <Image
-                    src="/img/img_24.png"
-                    width={120}
-                    height={120}
-                    alt="underline"
-                    className={clsx(
-                        "absolute w-full inset-y-10",
-                        {
-                            "hidden": pathname != href
-                        }
-                    )}
+                    src="/img/img_18.png"
+                    width={140}
+                    height={140}
+                    alt="playful background doodles"
+                    className="hidden md:block absolute transition-opacity -bottom-5 opacity-0 group-hover:opacity-100"
                 />
+                <p className="text-xl md:text-3xl text-white font-bold transition-all">{title}</p>
+                <div className="w-24 h-5 md:w-32 relative">
+                    <Image
+                        src="/img/img_24.png"
+                        fill={true}
+                        alt="underline"
+                        className={clsx(
+                            "",
+                            {
+                                "hidden": pathname != href
+                            }
+                        )}
+                    />
+                </div>
             </Link>
         </div>
     )

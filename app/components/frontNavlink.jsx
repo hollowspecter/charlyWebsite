@@ -1,9 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export function FrontNavLink({ keyRef, href, className, title, imgSrc }) {
+export function FrontNavLink({ keyRef, href, className = "", title, imgSrc, groupClassName = "" }) {
     return (
-        <div className="group">
+        <div className={`group ${groupClassName}`}>
             <Link
                 key={keyRef}
                 href={href}

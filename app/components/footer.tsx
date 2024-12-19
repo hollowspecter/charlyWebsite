@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="mb-16 flex justify-between w-[800px]">
-      <p className="mt-8 text-neutral-600 dark:text-neutral-300">
+    <footer className="mb-16 flex flex-col md:flex-row md:justify-between md:w-[800px] items-center mt-8">
+      <p className="text-neutral-600">
         © {new Date().getFullYear()} Charly Krenn. All rights reserved.
       </p>
-      <a href="/p/impress" className="mt-8 text-neutral-600 dark:text-neutral-300">
+      <a href="/p/impress" className="text-neutral-600">
         Impressum & Datenschutzerklärung
       </a>
     </footer>

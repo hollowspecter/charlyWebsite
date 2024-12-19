@@ -6,47 +6,55 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <main className="h-screen bg-[url('/mesh-gradient.png')] flex flex-col px-60 py-32 justify-between bg-cover">
+    <main className={`h-screen bg-[url('/mesh-gradient.jpg')]
+      md:bg-[url('/mesh-gradient_desktop.jpg')] flex flex-col bg-cover
+      lg:px-60 md:py-32 md:justify-between justify-center
+      `}>
       {/* Header */}
-      <div className="flex flex-col w-auto h-auto" >
+      <div className="flex flex-col w-auto h-auto items-center md:items-start" >
         <Title />
-        <p className="text-3xl text-white mb-8">
+        <p className="text-2xl md:text-3xl text-white mb-2 md:mb-8">
           Sozialarbeiter*in
           <br />
           Autor*in
         </p>
-        <Image
-          src="/img/img_20.png"
-          width={75}
-          height={75}
-          alt="playful background doodles"
-          className="hover:animate-spin"
-        />
+        <div className="w-20 h-20 relative">
+          <Image
+            src="/img/img_20.png"
+            fill={true}
+            alt="playful background doodles"
+            className="hover:animate-spin static"
+          />
+        </div>
       </div >
       {/* Links */}
-      <div className="flex justify-between">
+      <div className="flex justify-around md:justify-between">
         <FrontNavLink
           keyRef="work"
           href="/p/work"
-          className=""
           title="Arbeit"
           imgSrc="/img/img_12.png"
         />
         <FrontNavLink
           keyRef="contact"
           href="/p/contact"
-          className=""
           title="Kontakt"
           imgSrc="/img/img_06.png"
         />
         <FrontNavLink
           keyRef="impress"
           href="/p/impress"
-          className=""
+          groupClassName="hidden md:block"
           title="Impressum"
           imgSrc="/img/img_22.png"
         />
       </div >
+      {/* Impress at bottom */}
+      <Link
+        href={"/p/impress"}
+        className="absolute bottom-5 right-5 text-white md:hidden">
+        Impressum
+      </Link>
     </main >
   )
 }
